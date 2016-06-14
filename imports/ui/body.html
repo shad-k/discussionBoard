@@ -1,0 +1,77 @@
+<body>
+<div class="container-fluid">
+  <h1 class="heading">Discussions App</h1>
+  <div class="container">
+    <header>
+      
+      {{#unless currentUser}}      
+        {{> login}}
+      {{else}}
+
+      <button class="logout">Logout</button>
+      <div class="clearFloat"></div>
+      <form class="new-discussion">
+        <div class="input-group">
+          <input class="form-control input-discussion" type="text" name="text" placeholder="Type to add new tasks" />
+          <span class="input-group-addon glyphicon glyphicon-send" aria-hidden="true"></span>
+        </div>
+      </form>
+      {{/unless}}
+    </header>
+
+    {{#if currentUser}}
+    <ul>
+      {{#each discussions}}
+        {{> content}}
+      {{/each}}
+    </ul>
+    {{/if}}
+  </div>
+</div>
+</body>
+ 
+<template name="content">
+  <div class="content">
+    <li>
+      <div class="user">{{username}} Posted</div>
+
+      <div class="text">{{text}}</div>
+
+      <div class="date">at {{formatDate createdAt}}</div>
+    </li>
+  </div>
+</template>
+
+<template name="login">
+  <div class="loginForms">
+
+  <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#signin" aria-controls="signin" role="tab" data-toggle="tab">Sign-in</a></li>
+      <li role="presentation"><a href="#signup" aria-controls="signup" role="tab" data-toggle="tab">Sign-up</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="signin">{{> signin}}</div>
+      <div role="tabpanel" class="tab-pane" id="signup">{{> signup}}</div>
+    </div>
+  </div>
+</template>
+
+
+<template name="signin">
+  <form class="form-group">
+        <input class="form-control" type="email" name="signinEmail" placeholder="Enter Your Email-Id">
+        <input class="form-control" type="password" name="signinPassword" placeholder="Enter Your Password">
+        <input class="form-control btn-primary" type="submit" value="Sign-In">
+    </form>
+</template>
+
+<template name="signup">
+    <form class="form-group">
+        <input class="form-control" type="email" name="signupEmail" placeholder="Enter Your Email-Id">
+        <input class="form-control" type="password" name="signupPassword" placeholder="Enter Your Password">
+        <input class="form-control btn-primary" type="submit" value="Sign-Up">
+    </form>
+</template>

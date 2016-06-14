@@ -1,0 +1,88 @@
+/* CSS declarations go here */
+.container-fluid {
+	background: linear-gradient(#3232FF, #6496D2, #9696FF, #C8C8FF);
+	/*height: 100vh;*/
+}
+
+.container {
+	background-color: #E1E1E1;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.heading {
+	color: white;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+}
+
+.form-control {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.loginForms {
+	position: relative;
+	top: 100px;
+	padding: 10px;
+	width: 50%;
+	height: 100%;
+	margin: auto;
+	vertical-align: middle;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav li {
+	font-weight: bold;
+}
+
+.logout {
+	float: right;
+	margin-top: 10px;
+}
+
+.clearFloat {
+	clear: both;
+}
+
+.input-discussion {
+	margin-top: 0px; 
+	font-size: 1.5em;
+	padding: 20px 0 20px 2px;
+}
+
+.new-discussion {
+	margin-top: 20px;
+}
+
+.content {
+	padding: 20px;
+}
+
+.content li {
+	list-style-type: none; 
+	background: linear-gradient(#FAC864, #C89632);
+	margin: 10px; 
+	padding: 20px;
+	
+}
+
+.user {
+	font-family: 'Bad Script', cursive;
+	font-weight: bold;
+	padding: 0; 
+}
+
+.text {
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	padding-bottom: 10px;
+	font-size: 1.5em;
+}
+
+.date {
+	text-align: right;
+	font-family: 'PT Sans', sans-serif;
+	color: #646464;
+	padding: 0;
+}
