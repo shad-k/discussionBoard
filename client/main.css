@@ -1,7 +1,6 @@
 /* CSS declarations go here */
 .container-fluid {
 	background: linear-gradient(#3232FF, #6496D2, #9696FF, #C8C8FF);
-	/*height: 100vh;*/
 }
 
 .container {
@@ -39,6 +38,10 @@
 .logout {
 	float: right;
 	margin-top: 10px;
+	background-color: red;
+	color: white;
+	border: 1px solid red;
+	border-radius: 50%;
 }
 
 .clearFloat {

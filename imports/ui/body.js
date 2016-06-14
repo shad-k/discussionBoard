@@ -52,6 +52,9 @@ Template.signup.events({
             Accounts.createUser({
             	email: emailVar,
             	password: passwordVar
+        	},
+        	function(err) {
+        		alert(err.reason);
         	});
         }
     });
@@ -62,6 +65,8 @@ Template.signin.events({
             event.preventDefault();
             var emailVar = event.target.signinEmail.value;
         	var passwordVar = event.target.signinPassword.value;
-            Meteor.loginWithPassword(emailVar, passwordVar);
+            Meteor.loginWithPassword(emailVar, passwordVar, function(err) {
+            	alert(err.reason);
+            });
         }
     });
